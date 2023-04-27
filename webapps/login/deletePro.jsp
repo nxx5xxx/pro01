@@ -11,15 +11,7 @@
 	String pass = "1234";
 	Connection conn = null;
 	PreparedStatement pstmt =null;
-	String sql = "update member set pw=?,name=?,tel=?,addr=?,email=? where id=?";
-	String mid = request.getParameter("mid");
-	String mpw =  request.getParameter("mpw");             
-	String mname = request.getParameter("mname");         
-	String mtel =  request.getParameter("mtel");           
-	String maddr = request.getParameter("maddr");         
-	String memail =  request.getParameter("memail");       
-	String mregdate = request.getParameter("mregdate");  
-	
+	String sql = "delete from member where id=?";
 	int sw=0;
 		try{
 		Class.forName(driver);
@@ -27,21 +19,15 @@
 				conn=DriverManager.getConnection(url, user, pass);
 				try{
 					pstmt=conn.prepareStatement(sql);
-					pstmt.setString(6, mid);
-					pstmt.setString(1, mpw);
-					pstmt.setString(2, mname);
-					pstmt.setString(3, mtel);
-					pstmt.setString(4, maddr);
-					pstmt.setString(5, memail);
-					System.out.println(mid);
-					System.out.println(mpw);
-					System.out.println(mregdate);
+					pstmt.setString(1, request.getParameter("id"));
+
 					sw=pstmt.executeUpdate();
 					if(sw>0){
-						System.out.println("정보갱신 성공");
-						response.sendRedirect("mypage.jsp");
+						System.out.println("정보삭제 성공");
+						session.invalidate();
+						response.sendRedirect("login.jsp");
 					}else{
-						System.out.println("정보갱신 에러");
+						System.out.println("정보삭제 에러");
 						response.sendRedirect("update.jsp");
 					}
 					pstmt.close();

@@ -38,43 +38,41 @@
 <!-- 헤더영역끝 -->
 	    <div class="content" style="min-height:500px">
             <figure class="vs">
-                <div class="img_box">
-                    회원가입
-                </div>
             </figure>
             <section class="page" id="page1">
                 <h2 class="page_tit"></h2>
                 <div class="page_wrap"></div>
-                <h2 class="title">회원가입 폼</h2>
+
 			<form name="login_form" action="joinpro.jsp" method="post" onsubmit="return form_check(this)">
-				<table class="table" id="tb1">
+				<table class="table" id="tb1" style="margin: 0 auto">
+				               <caption class="title" style="font-weight:bold ; font-size:24px">회원가입 폼</caption>
 					<tbody>
 						<tr>
 							<th><label for="id">아이디</label></th>
-							<td><input type="text" name="id" id="id" class="indata" pattern="[A-Z]{3,15}"  autofocus>
+							<td><input type="text" name="id" id="id" class="indata" pattern="[A-Za-z0-9]{3,15}"  autofocus>
 							<input type="hidden" name="id_ck" id="id_ck" value="no">
 							<input type="button" value="아이디 중복확인" onclick="idCheck()">
 							<div id="msg"></div></td>
 						</tr>
 						<tr>
 							<th><label for="pw">비밀번호</label></th>
-							<td><input type="password" name="pw" id="pw" required></td>
+							<td><input type="password" name="pw" id="pw" pattern="[A-Za-z0-9$!@#%^&*()]{3,50}"></td>
 						</tr>
 						<tr>
 							<th><label for="pw">비밀번호 확인</label></th>
-							<td><input type="password" name="pw2" id="pw2" required></td>
+							<td><input type="password" name="pw2" id="pw2" pattern="[A-Za-z0-9$!@#%^&*()]{3,50}"></td>
 						</tr>
 						<tr>
 							<th><label for="name">이름</label></th>
-							<td><input type="text" name="name" id="name" required></td>
+							<td><input type="text" name="name" id="name" pattern="[A-Za-z가-힣]{2,20}"></td>
 						</tr>
 						<tr>
 							<th><label for="addr">주소</label></th>
-							<td><input type="text" name="addr" id="addr" required></td>
+							<td><input type="text" name="addr" id="addr" maxlength="150"></td>
 						</tr>
 						<tr>
 							<th><label for="email">이메일</label></th>
-							<td><input type="text" name="email" id="email" required></td>
+							<td><input type="text" name="email" id="email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]"></td>
 						</tr>						
 						<tr>
 							<td colspan="2">

@@ -27,8 +27,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="<%=path1 %>/common.css">
-    <link rel="stylesheet" href="<%=path1 %>/main.css" >
-        <link rel="stylesheet" href="<%=path1 %>/subcommon.css" >
+    <link rel="stylesheet" href="<%=path1 %>/subcommon.css" >
 <style>
 </style>
 
@@ -48,7 +47,7 @@
                 <div class="page_wrap"></div>
                 <h2 class="title" style="text-align:center">로그인 폼</h2>
 			<form name="login_form" action="loginpro.jsp" method="post">
-				<table class="table" id="tb1" >
+				<table class="table" id="tb1" style="margin: 0 auto">
 					<tbody style="text-align:center">
 						<tr >
 							<th><label for="id">아이디</label></th>
@@ -60,8 +59,8 @@
 						</tr>
 						<tr>
 							<td colspan="2">
-								<input type="submit" value="로그인" > &nbsp; &nbsp; &nbsp; &nbsp;
-								<input type="reset" value="취소" >
+								<input type="submit" value="로그인" > &nbsp;
+								<input type="reset" value="취소" > &nbsp;
 								<input type="button" value="회원가입" onclick="location.href='agreement.jsp'">
 							</td>
 						</tr>

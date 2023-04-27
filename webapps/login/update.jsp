@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*" %>
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
 		String path1 = request.getContextPath();   
 
 	String driver = "org.postgresql.Driver";
@@ -18,6 +20,7 @@
 	String mtel ="";
 	String maddr ="";
 	String memail ="";
+	
 	String mregdate ="";
 		try{
 		Class.forName(driver);
@@ -80,8 +83,12 @@
     <link rel="stylesheet" href="<%=path1 %>/subcommon.css" >
 <style>
 table {border: 1px solid black;}
-th,td {border: 1px solid black; padding: 10px}
-td {text-align:center}
+th {border: 1px solid black; width: 200px ;height : 60px}
+td {border: 1px solid black; width: 400px ;height : 60px; padding:0 20px}
+table>input {width:100%}
+.delon,.delbox {display:none}
+.delon:checked ~ .delbox {display:block;}
+.uin {width : 100%}
 </style>
 
 </head>
@@ -98,48 +105,67 @@ td {text-align:center}
             <section class="page" id="page1">
                 <h2 class="page_tit"></h2>
                 <div class="page_wrap"></div>
-                <div style="width :500px ; margin:0 auto">
-                
-                <form action="updatePro.jsp?mid=<%=mid %>" method="post">
-                <table>
-                <tr>
-                <th>아이디</th>
-                <td><%=mid %></td>
-                </tr>
-                <tr>
-                <th><label for="mpw">비밀번호</label></th>
-                <td><input type="text" name="mpw" value="<%=mpw %>"></td>
-                </tr>
-                <tr>
-                <th><label for="mname">이름</label></th>
-                <td><input type="text" name="mpw" value="<%=mname %>"></td>
-                </tr>
-                <tr>
-                <th><label for="mtel">전화번호</label></th>
-                <td><input type="text" name="mpw" value="<%=mtel%>"></td>
-                </tr>
-                <tr>
-                <th><label for="maddr">주소</label></th>
-                <td><input type="text" name="mpw" value="<%=maddr %>"></td>
-                </tr>
-                <tr>
-                <th><label for="memail">이메일</label></th>
-                <td><input type="text" name="mpw" value="<%=memail %>"></td>
-                </tr>
-                <tr>
-                <th>등록일</th>
-                <td><%=mregdate %></td>
-                </tr>
-                <tr>
-                <th><a href="<%=path_hd%>/login/mypage.jsp" >취소</a></th>
-                <td><input type="submit" value="수정확인" ></td>
-                </tr>
+                <div >
+                <form action="updatePro.jsp?mid=<%=mid%>" method="post" onsubmit="return form_check(this)">
+                <table style="margin:0 auto" >
+	               	<tr>
+	                <th>아이디</th>
+	                <td><%=mid%></td>
+	                </tr>
+	                <tr>
+	                <th><label for="mpw">비밀번호</label></th>
+	                <td><input type="text" class="uin" name="mpw" value="<%=mpw %>"></td>
+	                </tr>
+					<tr>
+	                <th><label for="mpw">비밀번호 확인</label></th>
+	                <td><input type="text" class="uin" name="mpw2" ></td>
+	                </tr>
+	                <tr>
+	                <th><label for="mname">이름</label></th>
+	                <td><input type="text" class="uin" name="mname" value="<%=mname %>"></td>
+	                </tr>
+	                <tr>
+	                <th><label for="mtel">전화번호</label></th>
+	                <td><input type="text" class="uin" name="mtel" value="<%=mtel%>"></td>
+	                </tr>
+	                <tr>
+	                <th><label for="maddr">주소</label></th>
+	                <td><input type="text" class="uin" name="maddr" value="<%=maddr %>"></td>
+	                </tr>
+	                <tr>
+	                <th><label for="memail">이메일</label></th>
+	                <td><input type="text" class="uin" name="memail" value="<%=memail %>"></td>
+	                </tr>
+	                <tr>
+	                <th>등록일</th>
+	                <td><%=mregdate %></td>
+	                </tr>
+	                <tr>
+	                <th><a href="<%=path_hd%>/login/mypage.jsp" >취소</a></th>
+	                <td><input type="submit" value="수정확인" ></td>
+	                </tr>
                 </table>
                 </form>
+	                <div style="text-align: center">
+	                <label for="del" style="font-weight:bold; cursor:pointer">회원탈퇴</label>
+	                <input type="checkbox" id="del" class="delon" >
+		                <div class="delbox">
+		                <input type="button" onclick="location.href='deletePro.jsp?id=<%=mid%>'"  value="예"  >
+		                <input type="button" onclick="location.href='naver.com'"value="아니오"  >
+		                </div>
+	                </div>
                 </div>
-                
             </section>
         </div>
+        <script>
+        function form_check(x){
+        	if(x.mpw.value!=x.mpw2.value){
+        		alert("비밀번호의 값이 일치하지 않습니다");
+        		return false;
+        	}
+        	
+        }
+        </script>
 <!-- 푸터영역 -->
 <%@ include file="../footer.jsp" %>
 <!-- 푸터영역 끝 -->

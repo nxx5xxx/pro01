@@ -2,8 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*" %>
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
 		String path1 = request.getContextPath();   
-
 	String driver = "org.postgresql.Driver";
 	String url = "jdbc:postgresql://localhost/pro1";
 	String user="postgres";
@@ -80,8 +81,8 @@
     <link rel="stylesheet" href="<%=path1 %>/subcommon.css" >
 <style>
 table {border: 1px solid black;}
-th,td {border: 1px solid black; padding: 10px}
-td {text-align:center}
+th {border: 1px solid black; width: 200px ;height : 60px}
+td {text-align:center; border: 1px solid black; width: 400px ;height : 60px}
 </style>
 
 </head>
@@ -98,8 +99,8 @@ td {text-align:center}
             <section class="page" id="page1">
                 <h2 class="page_tit"></h2>
                 <div class="page_wrap"></div>
-                <div style="width :500px ; margin:0 auto">
-                <table>
+                <div>
+                <table style="margin:0 auto">
                 <tr>
                 <th>아이디</th>
                 <td><%=mid %></td>
@@ -129,8 +130,7 @@ td {text-align:center}
                 <td><%=mregdate %></td>
                 </tr>
                 <tr>
-                <th><a href="<%=path_hd%>/login/logout.jsp" >회원탈퇴</a></th>
-                <td><a href="<%=path_hd%>/login/update.jsp" >회원정보 수정</a></td>
+                <th colspan="2"><a href="<%=path_hd%>/login/update.jsp" >회원정보 수정</a></th>
                 </tr>
                 </table>
                 </div>

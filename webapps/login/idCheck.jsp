@@ -24,15 +24,6 @@
 					rs=pstmt.executeQuery();
 
 %>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<style>
-</style>
-
-</head>
-<body>
 	<input type="hidden" id="ck_id" name="ck_id" value="<%=id%>">
 <%
 		if(rs.next()){
@@ -46,21 +37,19 @@
 		<input type="hidden" id="ps" name="ps" value="yes">
 	<input type="hidden" id="msg" name="msg" value="사용 가능한 아이디">
 <%} %>
-	<button type="button" onclick="closing()">닫기</button>
 <script>
-function closing(){
-	var ps = document.getElementById("ps").value;
-		opener.document.getElementById("id").value = document.getElementById("ck_id").value;
-		opener.document.getElementById("id_ck").value = document.getElementById("ps").value;
-		opener.document.getElementById("msg").innerText= document.getElementById("msg").value;
-		if(ps=="yes"){
-			opener.document.getElementById("id").setAttribute("readonly",true); //readonly 속성을 부여한다  
-		}
-		window.close();
-}
+	function closed() {
+			var ps = document.getElementById("ps").value;
+				opener.document.getElementById("id").value = document.getElementById("ck_id").value;
+				opener.document.getElementById("id_ck").value = document.getElementById("ps").value;
+				opener.document.getElementById("msg").innerText= document.getElementById("msg").value;
+				if(ps=="yes"){
+					opener.document.getElementById("id").setAttribute("readonly",true); //readonly 속성을 부여한다  
+				}
+				window.close();
+	}
+	closed();
 </script>
-</body>
-</html>
 <%
 						rs.close();
 						pstmt.close();
