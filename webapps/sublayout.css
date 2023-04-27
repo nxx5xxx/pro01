@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.more { display: block; position: absolute; top: 60px; right: 200px; font-size: 68px; font-weight: bold;
+    width: 80px; height: 80px; border: 1px solid #ccc; text-align: center; color: #999;}
+
+.page_comment {font-size: 28px; padding: 20px 130px;}
+
+/* 3컬럼 */
+.grid3 {clear: both; width: 1280px;} 
+.grid3 .grid_box { clear: both; width: 1280px; padding-top: 80px;}
+.grid3 .grid_box li {float: left; width: 410px; margin-right:  25px; }
+.grid3 .grid_box li a {display: block;} 
+.grid3 .grid_box li:last-child { margin-right: 0; }
+
+
+
+/* .grid3 .grid_box li a { display:block; color:#fff; background-position:center center; 
+background-repeat: no-repeat; border-radius:40px; margin-top: 25px; min-height: 300px;
+padding-top:6em;  padding-left: 2em; font-size:30px; box-sizing:border-box; }
+.grid3 .grid_box li .grid_tit { line-height: 1.8; }
+.grid3 .grid_box li .grid_com { font-size:16px; } */
+/* .grid3 { clear:both; width: 1280px; }
+.grid3 .grid_box { clear:both; width: 1280px; padding-top: 40px; }
+.grid3 .grid_box li { width: 410px; margin-right: 25px; float:left; height: 624px; }
+.grid3 .grid_box li:last-child { margin-right: 0; }
+.grid3 .grid_box li a { display:block; color:#fff; background-position:center center; 
+background-repeat: no-repeat; border-radius:40px; margin-top: 25px; min-height: 300px;
+padding-top:6em;  padding-left: 2em; font-size:30px; box-sizing:border-box; }
+.grid3 .grid_box li .grid_tit { line-height: 1.8; }
+.grid3 .grid_box li .grid_com { font-size:16px; } */

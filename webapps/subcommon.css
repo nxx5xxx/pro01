@@ -1,0 +1,9 @@
+@charset "UTF-8";
+.vs {clear: both; border-top: 2px solid rgba(128, 128, 128, 0.158);}
+.img_box {text-align: center;padding-top: 50px; font-size: 50px; font-weight: bold;}
+.page {clear: both; border-bottom: 2px solid rgba(128, 128, 128, 0.158);
+    position: relative; width: 100vw; height:100vh;}
+.page_tit {text-align: center;padding-top: 130px; font-size: 35px; font-weight: bold;}
+.page_wrap {clear:both;  width: 1280px; margin: 0 auto;}
+#page1,#page2,#page3 {background-color: white;}
+
