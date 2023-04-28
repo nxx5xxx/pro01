@@ -1,9 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "java.sql.*" %>
 <%
-		String path1 = request.getContextPath();    
+	String path1 = request.getContextPath();
+	String nid= request.getParameter("id");					
 %>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,55 +24,63 @@
     <meta name="og:url" content="https://nxx5xxx.github.io/web1">
     <meta name="og:image" content="<%=path1%>/img/teruwaico.png">
 
+
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="<%=path1 %>/common.css">
-    <link rel="stylesheet" href="<%=path1 %>/subcommon.css" >
-<style>
-</style>
+    <link rel="stylesheet" href="<%=path1 %>/subcommon.css">
 
+    <style>
+table {margin : 0 auto ;border: 2px solid black ; border-collapse : collapse; }
+th {background-color:black ; color:white}
+th,td{ border: 1px solid black }
+.content_box {height: 300px ; width:300px;overflow-wrap: break-word;}
+
+    </style>
 </head>
 <body>
-<!-- 헤더영역 -->
-<%@ include file="../header.jsp" %>
-<!-- 헤더영역끝 -->
-	    <div class="content" style="min-height:500px">
+    <div class="container">
+    <!--헤더영역  -->
+    <%@ include file="../header.jsp" %>
+    <!--/헤더영역 -->
+		<div class="content">
             <figure class="vs">
                 <div class="img_box">
-                    로그인 페이지
+                    공지사항
                 </div>
             </figure>
             <section class="page" id="page1">
-                <h2 class="page_tit"></h2>
-                <div class="page_wrap"></div>
-                <h2 class="title" style="text-align:center">로그인 폼</h2>
-			<form name="login_form" action="loginpro.jsp" method="post">
-				<table class="table" id="tb1" style="margin: 0 auto">
-					<tbody style="text-align:center">
-						<tr >
-							<th><label for="id">아이디</label></th>
-							<td><input type="text" name="id" id="id" required autofocus></td>
-						</tr>
-						<tr>
-							<th><label for="pw">비밀번호</label></th>
-							<td><input type="password" name="pw" id="pw" required></td>
-						</tr>
-						<tr>
-							<td colspan="2">
-								<input type="submit" value="로그인" > &nbsp;
-								<input type="reset" value="취소" > &nbsp;
-								<input type="button" value="회원가입" onclick="location.href='agreement.jsp'">
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</form>
+                <h1 class="page_tit"></h1>
+                <div class="page_wrap">
+                
+                <form action="noticeInsertPro.jsp?id=<%=nid%>" method="post">
+						<table>
+							<tr>
+								<th colspan="4"><input type="text" name="title"  placeholder="제목"></th>
+							</tr>
+							<tr>
+								<th>등록자 명</th><td colspan="3"><%=nid%></td>
+							</tr>
+							<tr class="content_sub1">
+								<th colspan="4"><textarea rows="12" cols="10" class="content_box" name="content" ></textarea></th>
+							</tr>
+
+							<tr>
+							<th colspan="2"><a href="sub2.jsp">목록으로</a></th><th colspan="2"><input type="submit" value="글쓰기"></th>
+							</tr>
+						</table>
+				</form>
+						                
+                
+                </div>
             </section>
         </div>
-<!-- 푸터영역 -->
-<%@ include file="../footer.jsp" %>
-<!-- 푸터영역 끝 -->
+	 <!--푸터영역  -->
+    <%@ include file="../footer.jsp" %>
+    <!--/푸터영역 -->
+	</div>
+ 
 </body>
 </html>

@@ -14,13 +14,14 @@
     <meta name="keywords" content="떼루아, 떼루아와인아울렛, 와인아울렛, 떼루아 와인아울렛,와인,술,맛집">
     <meta name="description" content="떼루아 와인아울렛은 와인을 저렴하게 구매할수 있습니다">
     <meta name="author" content="nxx5xxx">
-    <link rel="shortcut icon" href=".\img\teruwaico.png">
+    <link rel="shortcut icon" href="<%=path1%>/img/teruwaico.png">
     <!-- 오픈그래프 -->
     <meta name="og:site_name" content="사이트이름">
     <meta name="og:title" content="포트폴리오 - 떼루아와인아울렛">
     <meta name="og:description" content="떼루아 와인아울렛은 와인을 저렴하게 구매할수 있습니다">
     <meta name="og:url" content="https://nxx5xxx.github.io/web1">
-    <meta name="og:image" content=".\img\sum1">
+    <meta name="og:image" content="<%=path1%>/img/teruwaico.png">
+
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">

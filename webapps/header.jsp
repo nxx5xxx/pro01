@@ -15,7 +15,7 @@
                         			<%
 										if(id.equals("admin") && id != "") {
 									%>
-						<li><a href="<%=path_hd%>/login/admin.jsp" style="color:black;display:inline" >관리자모드</a></li>
+						<li><a href="<%=path_hd%>/admin/adminpage.jsp" style="color:black;display:inline" >관리자모드</a></li>
 						<li><a href="<%=path_hd%>/login/logout.jsp" style="color:black;display:inline" >나가기</a></li>
 									<%
 										}
@@ -38,7 +38,7 @@
                     <nav class="gnb">
                         <ul class="gnb_fr">
                             <li>
-                                <a href="sub1.jsp">아울렛 소개</a>
+                                <a href="<%=path_hd%>/sub1.jsp">아울렛 소개</a>
                                 <div class="sub">
                                     <ul class="dp1">
                                         <li><a href="<%=path_hd%>/sub1.jsp#page1" >와인아울렛 소개</a></li>
@@ -48,7 +48,7 @@
                                 </div>
                             </li>
                             <li>
-                                <a href="<%=path_hd%>/sub2.jsp">공지사항</a>
+                                <a href="<%=path_hd%>/board/sub2.jsp">공지사항</a>
                             </li>
                             <li>
                                 <a href="<%=path_hd%>/sub3.jsp">한정수량 초특가</a>
@@ -60,7 +60,7 @@
                                     </div>
                             </li>
                             <li>
-                                <a href="sub4.jsp">이달의 특가</a>
+                                <a href="<%=path_hd%>/sub4.jsp">이달의 특가</a>
                                     <div class="sub">
                                         <ul class="dp3">
                                             <li><a href="<%=path_hd%>/sub4.jsp#page1">진행중인 특가</a></li>
@@ -69,7 +69,7 @@
                                     </div>
                             </li>
                             <li>
-                                <a href="sub5.jsp">이달의 와인</a>
+                                <a href="<%=path_hd%>/sub5.jsp">이달의 와인</a>
                                     <div class="sub">
                                         <ul class="dp4">
                                             <li><a href="<%=path_hd%>/sub5.jsp#page1">이달의 와인</a></li>
@@ -99,7 +99,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="<%=path_hd%>/sub2.jsp" class="group_b">공지사항</a>
+                                <a href="<%=path_hd%>/board/sub2.jsp" class="group_b">공지사항</a>
                             </li>
                             <li class="group">한정수량 초특가
                                 <ul>

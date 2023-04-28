@@ -48,7 +48,7 @@
                             <dd><a href="<%=path_ft%>/sub1.jsp#page3">아울렛 찾아오시는 길 </a></dd>
                         </dl>
                         <dl class="ft_link item2">
-                            <dt><a href="<%=path_ft%>/sub2.jsp">공지사항</a></dt>
+                            <dt><a href="<%=path_ft%>/board/sub2.jsp">공지사항</a></dt>
                         </dl>
                         <dl class="ft_link item3">
                             <dt>한정수량 초특가</dt>
