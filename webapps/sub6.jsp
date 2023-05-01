@@ -29,7 +29,7 @@
     <link rel="stylesheet" href="subcommon.css">
 
     <style>
-    
+	.page_wrap {text-align:center}
     </style>
 </head>
 <body>
@@ -44,8 +44,8 @@
                 </div>
             </figure>
             <section class="page" id="page1">
-                <h2 class="page_tit"></h2>
-                <div class="page_wrap"></div>
+                <h2 class="page_tit">고객센터 031-986-0777</h2>
+                <div class="page_wrap"><hr><h3>평일 : 오전 10:30 ~ 오후 08:30 | 주말·공휴일 : 오전 10:30 ~ 오후 08:00</h3><hr></div>
             </section>
             <!-- <section class="page" id="page2">
                 <h2 class="page_tit"></h2>

@@ -39,6 +39,22 @@
     background-size:100% auto; background-attachment: fixed; }
     #page2 .page_comment { text-shadow:1px 1px 3px #333; color:#fff; }
 
+/*  */
+    .page3_box {text-align: center; width: 819px; margin: 0 auto; }
+    .page3_box>label>img {height: 100px; }
+    .pg3_bt_input {display: none;}
+    .page3_show_fr {clear:both ;overflow: hidden;width: 819px; height: 567px;padding-top: 40px;}
+    .page3_show_fr .ban_box { width: 500%; height: 550px; transition-duration: 0.6s; }
+    .page3_show_fr .ban_box li { width: 819px; float: left; height: 550px;}
+    .page3_show_fr .ban_box li .pic {display: block; width: 819px; height: 567px; float: left; }
+
+        .item1 > img {margin-top: 10px}
+    #pg3_bt1:checked ~ .page3_show_fr .ban_box { margin-left: 0;}
+    #pg3_bt2:checked ~ .page3_show_fr .ban_box { margin-left: -819px;}
+    #pg3_bt3:checked ~ .page3_show_fr .ban_box { margin-left: -1638px;}
+    #pg3_bt4:checked ~ .page3_show_fr .ban_box { margin-left: -2457px;}
+    #pg3_bt5:checked ~ .page3_show_fr .ban_box { margin-left: -3276px;}
+/*  */
     </style>
 </head>
 <body>
@@ -127,7 +143,40 @@
             </section>
             <section class="page" id="page3">
                 <h2 class="page_tit">아울렛 매장 구경하기</h2>
-                <div class="page_wrap"></div>
+                <div class="page_wrap">
+                    <article class="page3_box">
+                        <input type="radio" id="pg3_bt1" name="pa3_bt" class="pg3_bt_input" checked>
+                        <input type="radio" id="pg3_bt2" name="pa3_bt" class="pg3_bt_input">
+                        <input type="radio" id="pg3_bt3" name="pa3_bt" class="pg3_bt_input">
+                        <input type="radio" id="pg3_bt4" name="pa3_bt" class="pg3_bt_input">
+                        <input type="radio" id="pg3_bt5" name="pa3_bt" class="pg3_bt_input">
+                        <div class="page3_show_fr">
+                            <ul class="ban_box">
+                                <li class="item1">
+                                    <img src="./img/bt2img1.jpg" alt="사진1" class="pic">
+                                </li>
+                                <li class="item2">
+                                    <img src="./img/bt2img2.jpg" alt="사진2" class="pic">
+                                </li>
+                                <li class="item3">
+                                    <img src="./img/bt2img3.jpg" alt="사진3" class="pic">
+                                </li>
+                                <li class="item4">
+                                    <img src="./img/bt2img4.jpg" alt="사진3" class="pic">
+                                </li>
+                                <li class="item5">
+                                    <img src="./img/bt2img5.jpg" alt="사진3" class="pic">
+                                </li>
+                            </ul>
+                        </div>
+                        <label for="pg3_bt1" class="item1"><img src="./img/bt2img1.jpg"></label>
+                        <label for="pg3_bt2" class="item1"><img src="./img/bt2img2.jpg"></label>
+                        <label for="pg3_bt3" class="item1"><img src="./img/bt2img3.jpg"></label>
+                        <label for="pg3_bt4" class="item1"><img src="./img/bt2img4.jpg"></label>
+                        <label for="pg3_bt5" class="item1"><img src="./img/bt2img5.jpg"></label>
+
+                    </article>
+                </div>
             </section>
         </div>
         

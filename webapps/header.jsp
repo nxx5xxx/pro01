@@ -42,8 +42,8 @@
                                 <div class="sub">
                                     <ul class="dp1">
                                         <li><a href="<%=path_hd%>/sub1.jsp#page1" >와인아울렛 소개</a></li>
-                                        <li><a href="<%=path_hd%>/sub1.jsp#page2" >아울렛 매장 구경하기</a></li>
-                                        <li><a href="<%=path_hd%>/sub1.jsp#page3">아울렛 찾아오시는 길</a></li>
+                                        <li><a href="<%=path_hd%>/sub1.jsp#page2" >아울렛 찾아오시는 길</a></li>
+                                        <li><a href="<%=path_hd%>/sub1.jsp#page3">아울렛 매장 구경하기</a></li>
                                     </ul>
                                 </div>
                             </li>
@@ -94,8 +94,8 @@
                             <li class="group">떼루아 와인아울렛
                                 <ul>
                                    <li><a href="<%=path_hd%>/sub1.jsp#page1" >와인아울렛 소개</a></li>
-                                    <li><a href="<%=path_hd%>/sub1.jsp#page2" >아울렛 매장 구경하기</a></li>
-                                    <li><a href="<%=path_hd%>/sub1.jsp#page3" >아울렛 찾아오시는 길</a></li>
+                                    <li><a href="<%=path_hd%>/sub1.jsp#page2" >아울렛 찾아오시는 길</a></li>
+                                    <li><a href="<%=path_hd%>/sub1.jsp#page3" >아울렛 매장 구경하기</a></li>
                                 </ul>
                             </li>
                             <li>

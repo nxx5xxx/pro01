@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*" %>
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
 	String sub2id = "";
 	if(session.getAttribute("id")!=null) {
 		sub2id = (String) session.getAttribute("id");
@@ -52,12 +54,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="<%=path1 %>/common.css">
     <link rel="stylesheet" href="<%=path1 %>/subcommon.css">
+    
+    <script src="<%=path1%>/jquery-1.10.1.min.js"></script>
+    <script src="<%=path1%>/datatables.min.js"></script>
+    <link rel="stylesheet" href="<%=path1%>/datatables.min.css">
 
     <style>
-table {margin : 0 auto ;border: 2px solid black ; border-collapse : collapse;}
-th {background-color:black ; color:white}
-th,td{ border: 1px solid black }
+table { display:table; margin : 0 auto ;border: 2px solid black ; border-collapse : collapse; width:1100px ;
+	text-align:center; margin-top:50px}
+tr {display:table-row;}
+th {background-color:black ; color:white ; }
+th,td{ display:table-cell; border: 1px solid black ;padding:5px}
 .nt_write {text-align : center}
+hr {width:1500px ; margin: 0 auto; }
+.page_tit{padding-top:30px ; }
+.table.dataTable thead>tr>th { text-align:center; }
+.dataTables_length { margin-bottom: 10px; }
+.page_wrap {margin-top:50px}
     </style>
 </head>
 <body>
@@ -71,14 +84,18 @@ th,td{ border: 1px solid black }
                     공지사항
                 </div>
             </figure>
+
             <section class="page" id="page1">
                 <h1 class="page_tit"></h1>
-                <div class="page_wrap">
-                
-						<table>
+                <hr>
+                <div class="page_wrap">  
+					<table class="table" id="tb1">
+						<thead>
 							<tr>
-							<th>글번호</th><th>이름</th><th>제목</th><th>작성일</th>
+							<th>글번호</th><th>작성자</th><th>제목</th><th>작성일</th>
 							</tr>
+						</thead>
+						<tbody>
 						<%
 							while(rs.next()){
 						%>
@@ -103,7 +120,7 @@ th,td{ border: 1px solid black }
 						<%
 							}
 						%>
-
+						</tbody>
 						</table>
 						<%
 						if(sub2id!=""){
@@ -112,9 +129,12 @@ th,td{ border: 1px solid black }
 						<input type="button"  onclick="location.href='noticeInsert.jsp?id=<%=sub2id%>'" value="글쓰기">
 						</div>
 						<%}%>
-						                
-                
                 </div>
+                <script>
+				$(document).ready(function(){
+				    $('#tb1').DataTable({'order': [[0, 'desc']]});
+				});
+				</script>
             </section>
         </div>
 	 <!--푸터영역  -->

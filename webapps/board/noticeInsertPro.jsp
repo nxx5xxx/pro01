@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*" %>
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
 	String path1 = request.getContextPath();
 	String nid= request.getParameter("id");
 	String driver = "org.postgresql.Driver";

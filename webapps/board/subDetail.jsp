@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*" %>
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
 	String path1 = request.getContextPath();
 	String sub2delId="";
 	if(session.getAttribute("id")!=null){
@@ -56,9 +58,12 @@
     <link rel="stylesheet" href="<%=path1 %>/subcommon.css">
 
     <style>
-table {margin : 0 auto ;border: 2px solid black ;border-collapse : collapse; }
+table {margin : 0 auto ;border: 2px solid black ;border-collapse : collapse; width: 1100px}
 th {background-color:black ; color:white}
 th,td{ border: 1px solid black }
+.bg_white{background-color:white ; color:black;}
+a:link,a:visited {color : white;}
+.page_tit {padding-top:50px}
     </style>
 </head>
 <body>
@@ -81,7 +86,7 @@ th,td{ border: 1px solid black }
 							if(rs.next()){
 						%>
 							<tr>
-								<th colspan="4"><%=rs.getString("title") %></th>
+								<th colspan="4" class="bg_white"><%=rs.getString("title") %></th>
 							</tr>
 							<tr>
 								<th>등록자 명</th><td><%=rs.getString("name") %></td><th>등록일</th><td><%=rs.getString("regdate") %></td>
@@ -90,7 +95,7 @@ th,td{ border: 1px solid black }
 								<th>글 번호</th><td colspan="3"><%=rs.getString("bno") %></td>
 							</tr>
 							<tr class="content_sub1">
-								<th colspan="4"><%=rs.getString("content") %></th>
+								<th colspan="4" class="bg_white" style="overflow-y:scroll;height:500px;text-align:left;vertical-align:top"><%=rs.getString("content") %></th>
 							</tr>
 						
 						<%

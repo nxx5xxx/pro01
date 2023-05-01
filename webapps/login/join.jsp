@@ -68,6 +68,10 @@
 							<td><input type="text" name="name" id="name" pattern="[A-Za-z가-힣]{2,20}"></td>
 						</tr>
 						<tr>
+							<th><label for="tel">전화번호</label></th>
+							<td><input type="text" name="tel" id="tel" pattern="[0-9$-]{8,13}"></td>
+						</tr>
+						<tr>
 							<th><label for="addr">주소</label></th>
 							<td><input type="text" name="addr" id="addr" maxlength="150"></td>
 						</tr>

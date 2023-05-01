@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	String path1=request.getContextPath();
+%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -29,7 +32,9 @@
     <link rel="stylesheet" href="subcommon.css">
 
     <style>
-    
+  .page_tit {padding-top:50px}
+  .sub4_b1 {height : 660px ; margin-top:50px}
+  .page_wrap {text-align:center}
     </style>
 </head>
 <body>
@@ -45,11 +50,15 @@
             </figure>
             <section class="page" id="page1">
                 <h2 class="page_tit">진행중인 특가</h2>
-                <div class="page_wrap"></div>
+                <div class="page_wrap"><h3>[진행] 04월 이달의 특가가 업데이트 되었습니다.</h3>
+                	<img src="<%=path1%>/img/sub4_b1.PNG" class="sub4_b1">
+                </div>
             </section>
             <section class="page" id="page2">
                 <h2 class="page_tit">지난 와인 다시보기</h2>
-                <div class="page_wrap"></div>
+                <div class="page_wrap"><h3>[마감] 03월 이달의 특가가 업데이트 되었습니다.</h3>
+                	<img src="<%=path1%>/img/sub4_b2.PNG" class="sub4_b1">
+                </div>
             </section>
 
         </div>

@@ -44,8 +44,8 @@
                         <dl class="ft_link item1">
                             <dt>아울렛 소개</dt>
                             <dd><a href="<%=path_ft%>/sub1.jsp#page1">와인아울렛 소개</a></dd>
-                            <dd><a href="<%=path_ft%>/sub1.jsp#page2">아울렛 매장 구경하기</a></dd>
-                            <dd><a href="<%=path_ft%>/sub1.jsp#page3">아울렛 찾아오시는 길 </a></dd>
+                            <dd><a href="<%=path_ft%>/sub1.jsp#page2">아울렛 찾아오시는 길</a></dd>
+                            <dd><a href="<%=path_ft%>/sub1.jsp#page3">아울렛 매장 구경하기 </a></dd>
                         </dl>
                         <dl class="ft_link item2">
                             <dt><a href="<%=path_ft%>/board/sub2.jsp">공지사항</a></dt>

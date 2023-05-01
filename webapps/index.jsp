@@ -197,7 +197,7 @@
                 </div>
                 
             </section>
-            </section>
+            
             <section class="page" id="page4">
                 <h2 class="page_title" style="visibility: hidden;">공지사항</h2>
                 <div class="page_wrap">

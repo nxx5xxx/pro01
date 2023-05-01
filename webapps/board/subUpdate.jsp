@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*" %>
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
 	String path1 = request.getContextPath();
 //	String sub2delId="";
 //	if(session.getAttribute("id")!=null){
@@ -56,14 +58,17 @@
     <link rel="stylesheet" href="<%=path1 %>/subcommon.css">
 
     <style>
-table {margin : 0 auto ;border: 2px solid black ; border-collapse : collapse; }
-th {background-color:black ; color:white}
+table {margin : 0 auto ;border: 2px solid black ; border-collapse : collapse; width:1100px}
+th {background-color:black ; color:white ;}
 th,td{ border: 1px solid black }
-.content_box {height: 300px ; width:300px;overflow-wrap: break-word;}
+.content_box {height: 300px ; width:100% ;overflow-wrap: break-word;resize:none}
 .del_ck,.del_yes {display:none}
 .del_ck:checked ~ .del_yes{display:block}
 .del_wrap {text-align:center}
 .del_wrap > input{margin:0 auto}
+.page_tit {padding-top:50px}
+a:link,a:visited {color : white;}
+.iw {width:100%}
     </style>
 </head>
 <body>
@@ -87,7 +92,7 @@ th,td{ border: 1px solid black }
 							if(rs.next()){
 						%>
 							<tr>
-								<th colspan="4"><input type="text" name="title" value="<%=rs.getString("title") %>"></th>
+								<th colspan="4"><input type="text" name="title" class="iw" value="<%=rs.getString("title") %>"></th>
 							</tr>
 							<tr>
 								<th>등록자 명</th><td><%=rs.getString("name") %></td><th>등록일</th><td><%=rs.getString("regdate") %></td>
@@ -102,7 +107,7 @@ th,td{ border: 1px solid black }
 							}
 						%>
 							<tr>
-							<th colspan="2"><a href="sub2.jsp">취소</a></th><th colspan="2"><input type="submit" value="수정"></th>
+							<th colspan="2"><a href="sub2.jsp">취소</a></th><th colspan="2"><input type="submit" class="iw" value="수정"></th>
 							</tr>
 						</table>
 				</form>

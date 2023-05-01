@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ page import = "java.sql.*" %>
 <%
+	request.setCharacterEncoding("UTF-8");
+	response.setContentType("text/html; charset=UTF-8");
 	String path1 = request.getContextPath();
 	String nid= request.getParameter("id");					
 %>
@@ -33,11 +35,13 @@
     <link rel="stylesheet" href="<%=path1 %>/subcommon.css">
 
     <style>
-table {margin : 0 auto ;border: 2px solid black ; border-collapse : collapse; }
+table {margin : 0 auto ;border: 2px solid black ; border-collapse : collapse; width: 1100px}
 th {background-color:black ; color:white}
 th,td{ border: 1px solid black }
-.content_box {height: 300px ; width:300px;overflow-wrap: break-word;}
-
+input {width:100%}
+.content_box {height: 300px ; width:100% ;overflow-wrap: break-word;resize:none}
+a:link,a:visited {color : white;}
+.page_tit{padding-top:50px}
     </style>
 </head>
 <body>
