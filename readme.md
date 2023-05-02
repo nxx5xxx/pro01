@@ -7,8 +7,38 @@ java(1.8 ver), css , html 등을 활용하였고
 회원은 자신의 정보를 수정및 삭제할수 있는 마이페이지의 기능을 구현하였고
 관리자는 회원들의 정보와 게시판을 관리할수있는 관리자 페이지 기능을 구현하였다
 
+## 개념적설계
+### 요구사항
+1. 홈페이지의 전반적인 기능을 수행가능하여야한다
+2. 회원 가입 기능을 구현한다
+3. 공지사항을 읽거나 쓰려면(게시판) 로그인을 하여야한다
+4. 본인 외의 글은 삭제 혹은 수정할수 없다
+5. 관리자 페이지를 따로 만들어야한다
+6. 관리자는 게시판과 회원을 관리할수 있어야한다
+7. 관리자는 모든 게시글을 수정 및 삭제가 가능하여야한다
+8. 관리자는 회원의 정보를 수정 및 삭제가 가능하여야한다
+9. 회원은 자신계정을 볼수있어야한다 (마이페이지기능)
+10. 회원은 자신계정을 수정할수 있어야한다
+11. 회원은 탈퇴가 가능하여야한다
 
-## 페이지 구성도
+### 유스케이스다이어그램
+![유스케이스다이어그램](./readmefiles/pro01.drawio.png "유즈케이스다이어그램")
+
+## 논리적설계
+### 논리적검증
+![논리검증체크리스트](./readmefiles/logic.PNG "논리검증체크리스트")
+### 논리적ERD
+![논리적ERD](./readmefiles/pro01_logicERD.drawio.png "논리적ERD")
+
+## 물리적설계
+### 물리적설계표
+![물리적설계](./readmefiles/physical.PNG "물리적설계표")
+### 테이블ERD
+![물리적ERD](./readmefiles/pro01_ERD.pgerd.png "테이블ERD")
+
+
+# 기능 구현 및 메뉴얼
+
 메인화면(index.jsp) -> 아울렛소개(sub1.jsp) / 공지사항(board/sub2.jsp) / 한정수량 초특가(sub3.jsp) / 이달의특가(sub4.jsp) / 이달의와인(sub5.jsp) / 고객지원(sub6.jsp)
 ![메인화면](./readimg/main.JPG "메인화면")
 
@@ -74,38 +104,24 @@ java(1.8 ver), css , html 등을 활용하였고
 
 회원삭제 -> 관리자모드(admin/adminpage.jsp) -> 회원관리(admin/adminUsers.jsp) -> 회원정보삭제(admin/admindeletePro.jsp) -> 회원관리페이지(admin/adminUsers.jsp)
 ![회원관리](./readimg/admin/top_button.JPG "관리자모드")
-![회원관리](./readimg/admin/adminuser.JPG "회원관리")
+![회원관리](./readimg/admin/adminuser.JPG "회원 관리")
 ![회원관리](./readimg/admin/adminuserdel.JPG "회원삭제")
 
 게시글관리 -> 관리자모드(admin/adminpage.jsp) -> 글관리(admin/adminsub2.jsp) 
-![회원관리](./readimg/admin/top_button.JPG "관리자모드")
-![회원관리](./readimg/admin/adminsub2 "글관리")
+![게시글관리](./readimg/admin/top_button.JPG "관리자모드")
+![게시글관리](./readimg/admin/adminsub2.jpg "글관리")
 
-게시글수정 -> 관리자모드(admin/adminpage.jsp) -> 글관리(admin/adminsub2.jsp) -> 글자세히(admin/adminsubDetail.jsp)
-![회원관리](./readimg/admin/top_button.JPG "관리자모드")
-![회원관리](./readimg/admin/adminsub2 "글관리")
-![회원관리](./readimg/admin/adminsub2detail "글자세히")
+게시글수정 -> 관리자모드(admin/adminpage.jsp) -> 글관리(admin/adminsub2.jsp) -> 글자세히(admin/adminsubDetail.jsp) -> 글 수정하기(admin/adminsubUpdate.jsp)
+    -> 글 수정(adminsubUpdatePro.jsp) -> 글자세히(adminsubDetail.jsp)
 
+![게시글관리](./readimg/admin/top_button.JPG "관리자모드")
+![게시글관리](./readimg/admin/adminsub2.jpg "글관리")
+![게시글관리](./readimg/user/boarddetail.jpg "글 자세히")
+![게시글관리](./readimg/user/boardupdate.jpg "글 수정하기")
+![게시글관리](./readimg/user/boardupdate2.jpg "수정한 게시글")
 
-## 프로젝트 설계
-![개념적 설계](./img/database/pro01_01.png "개념적 설계")
-![논리적 설계](./img/database/pro01_02.png "논리적 설계")
-![물리적 설계1](./img/database/pro01_03.png "물리적 설계1")  
-![물리적 설계2](./img/database/pro01_04.png "물리적 설계2")
-![클래스 설계](./img/database/pro01_05.png "클래스 설계")
-![기능 설계](./img/database/pro01_06.png "기능 설계")
-![DB ERD](./img/database/pro01_07.png "DB ERD")
-![회원가입 시퀀스](./img/database/pro01_08.png "회원가입 시퀀스")
-![로그인 시퀀스](./img/database/pro01_09.png "로그인 시퀀스")
+게시글삭제 -> 관리자모드(admin/adminpage.jsp) -> 글관리(admin/adminsub2.jsp) -> 삭제(admindeletePro.jsp)
+![게시글관리](./readimg/admin/top_button.JPG "관리자모드")
+![게시글관리](./readimg/admin/admindel1.JPG "글관리")
+![게시글관리](./readimg/admin/admindel2.JPG "삭제후 게시글")
 
-## 기능 구현
-![메인페이지](./img/pro01_1.png "메인페이지 첫 번째")
-![메인페이지](./img/pro01_2.png "메인페이지 두 번째")
-![메인페이지](./img/pro01_3.png "메인페이지 세 번째")
-![메인페이지](./img/pro01_4.png "메인페이지 네 번째")
-![메인페이지](./img/pro01_5.png "메인페이지 다섯 번째")
-![로그인페이지](./img/pro01_6.png "로그인 페이지")
-![회원약관 페이지](./img/pro01_7.png "회원약관 페이지")
-![회원가입 페이지](./img/pro01_8.png "회원가입 페이지")
-![자주하는 질문 및 답변 페이지](./img/pro01_9.png "자주하는 질문 및 답변 페이지")
-![자주하는 질문 및 답변 상세페이지](./img/pro01_10.png "자주하는 질문 및 답변 상세 페이지")
