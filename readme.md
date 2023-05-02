@@ -1,9 +1,91 @@
 # 프로젝트
 ## 프로젝트 개요
-"WE DISPLAY" 라는 가상 기업을 주제로 프론트엔드 부분을 설계 시에는 페이퍼 프로토타입으로 사용성을 테스트 한 후, html과 css, javascript로 작성하고, 백엔드 부분은 jsp의 디렉티브, 스크립트릿, 표현식만 활용하여 기업형 
-데스크탑 웹 애플리케이션을 작성하였으며, 해당 프로젝트는 회원기능인 회원가입, 로그인, 로그아웃, 회원 정보 확인,
-회원 정보 수정, 회원 탈퇴, 회원의 게시판 글 목록, 글 상세보기, 글 등록, 글 수정, 글 삭제 등의 기능을 구현하였으며,
-관리자는 일반 회원의 관리기능인 회원 정보 수정, 회원 강제 탈퇴, 회원 통계, 글 관리 기능 등을 구현하였음.
+떼루아 와인아울렛을 모델로 재설계하였다
+java(1.8 ver), css , html 등을 활용하였고
+해당 프로젝트는 메인페이지,서브페이지6개 와 회원가입 , 회원 탈퇴 , 회원정보 수정 , 로그인 ,로그아웃
+글쓰기 , 글 수정 , 글삭제 , 관리자용 관리페이지 등으로 작성되었고
+회원은 자신의 정보를 수정및 삭제할수 있는 마이페이지의 기능을 구현하였고
+관리자는 회원들의 정보와 게시판을 관리할수있는 관리자 페이지 기능을 구현하였다
+
+
+## 페이지 구성도
+메인화면(index.jsp) -> 아울렛소개(sub1.jsp) / 공지사항(board/sub2.jsp) / 한정수량 초특가(sub3.jsp) / 이달의특가(sub4.jsp) / 이달의와인(sub5.jsp) / 고객지원(sub6.jsp)
+![메인화면](./readimg/main.JPG "메인화면")
+
+### 회원기능
+
+회원가입 - > 약관 페이지(login/agreement.jsp) -> 회원 가입 폼(login/join.jsp) -> 아이디중복확인 (login/idCheck.jsp) -> 회원가입처리(login/joinpro.jsp) -> 로그인페이지(login/login.jsp)
+![회원기능](./readimg/user/add1.JPG "회원기능")
+![회원가입폼](./readimg/user/add2.JPG "가입폼")
+![회원가입폼](./readimg/user/add3.JPG "중복확인")
+![로그인페이지](./readimg/user/add4.JPG "로그인페이지")
+
+로그인 -> 로그인폼(login/login.jsp) -> 로그인처리(login/loginpro.jsp) -> 메인화면(index.jsp)
+![로그인페이지](./readimg/user/add4.JPG "로그인페이지")
+![로그인페이지](./readimg/user/login.JPG "로그인페이지")
+![메인화면](./readimg/main.JPG "메인화면")
+
+회원정보 수정 -> 마이페이지(login/mypage.jsp) -> 회원정보수정페이지(login/update.jsp) -> 수정확인(login/updatePro.jsp)-> 마이페이지(login/mypage.jsp)
+![마이페이지](./readimg/user/top_button.JPG "마이페이지")
+![마이페이지](./readimg/user/mypage.JPG "마이페이지")
+![회원정보수정페이지](./readimg/user/mypageupdate.JPG "회원정보수정페이지")
+![회원정보수정페이지](./readimg/user/mypageupdate2.JPG "회원정보수정확인")
+![마이페이지](./readimg/user/mypage2.JPG "마이페이지")
+
+회원탈퇴    -> 마이페이지(login/mypage.jsp) -> 회원정보수정페이지(login/update.jsp) -> 회원탈퇴(login/deletePro.jsp) -> 로그인페이지(login/login.jsp)
+![마이페이지](./readimg/user/mypage2.JPG "마이페이지")
+![회원정보수정페이지](./readimg/user/mypageupdate2.JPG "회원정보수정페이지")
+![마이페이지](./readimg/user/mypagedel.JPG "마이페이지")
+
+
+회원의 글쓰기는 어디까지나 테스트적인 면에서 로그인 한 회원도 글을쓸수 있고 자신의 글(다른사람은 불가)을 수정 할수 있는 기능해 놓았다
+글쓰기 -> 공지사항(board/sub2.jsp) -> 글쓰기(board/noticeInsert.jsp) -> 글쓰기확인(board/noticeInsertPro.jsp) -> 공지사항board/sub2.jsp)
+![공지사항](./readimg/user/board.JPG "공지사항")
+![공지사항](./readimg/user/boardinsert.jpg "글쓰기")
+![공지사항](./readimg/user/boardinsert2.jpg "글쓰기확인")
+
+글수정 -> 공지사항(board/sub2.jsp) -> 글 자세히 (board/subDetail.jsp) -자신의글만 가능함- -> 수정하기(board/subUpdate.jsp) -> 수정(board/subUpdatePro.jsp) -> 수정한 게시글 (board/subDetail.jsp)
+![공지사항](./readimg/user/boardinsert2.jpg "공지사항")
+![공지사항](./readimg/user/boarddetail.jpg "글 자세히")
+![공지사항](./readimg/user/boardupdate.jpg "글 수정하기")
+![공지사항](./readimg/user/boardupdate2.jpg "수정한 게시글")
+
+글삭제 -> 공지사항(board/sub2.jsp) -> 글 자세히 (board/subDetail.jsp) -자신의글만 가능함- -> 수정하기(board/subUpdate.jsp) -> 글 삭제(board/deletePro.jsp) -> 게시글목록 (board/sub2.jsp)
+![공지사항](./readimg/user/boardinsert2.jpg "공지사항")
+![공지사항](./readimg/user/boarddetail.jpg "글 자세히")
+![공지사항](./readimg/user/boardupdate.jpg "글 수정하기")
+![공지사항](./readimg/user/boarddel.jpg "글 삭제하기")
+![공지사항](./readimg/user/boarddel2.jpg "글 삭제 후 게시글 목록")
+
+### 관리자기능
+관리자로그인 -> 로그인폼(login/login.jsp) -> 로그인처리(login/loginpro.jsp) -> 메인화면(index.jsp)
+*관리자로 로그인을 하면 우측상단 마이페이지 부분에 관리자모드기능과 나가기가 생김
+![로그인페이지](./readimg/user/login.JPG "로그인페이지")
+![마이페이지](./readimg/admin/top_button.JPG "마이페이지")
+
+회원관리 ->  관리자모드(admin/adminpage.jsp) -> 회원관리(admin/adminUsers.jsp)
+![회원관리](./readimg/admin/top_button.JPG "관리자모드")
+![회원관리](./readimg/admin/adminuser.JPG "회원관리")
+
+회원정보수정 ->  관리자모드(admin/adminpage.jsp) -> 회원관리(admin/adminUsers.jsp) -> 회원정보수정(admin/adminupdate.jsp) -> 회원관리페이지(admin/adminUsers.jsp)
+![회원관리](./readimg/admin/top_button.JPG "관리자모드")
+![회원관리](./readimg/admin/adminuser.JPG "회원관리")
+![회원관리](./readimg/admin/adminUserUpdate.JPG "회원정보수정")
+
+회원삭제 -> 관리자모드(admin/adminpage.jsp) -> 회원관리(admin/adminUsers.jsp) -> 회원정보삭제(admin/admindeletePro.jsp) -> 회원관리페이지(admin/adminUsers.jsp)
+![회원관리](./readimg/admin/top_button.JPG "관리자모드")
+![회원관리](./readimg/admin/adminuser.JPG "회원관리")
+![회원관리](./readimg/admin/adminuserdel.JPG "회원삭제")
+
+게시글관리 -> 관리자모드(admin/adminpage.jsp) -> 글관리(admin/adminsub2.jsp) 
+![회원관리](./readimg/admin/top_button.JPG "관리자모드")
+![회원관리](./readimg/admin/adminsub2 "글관리")
+
+게시글수정 -> 관리자모드(admin/adminpage.jsp) -> 글관리(admin/adminsub2.jsp) -> 글자세히(admin/adminsubDetail.jsp)
+![회원관리](./readimg/admin/top_button.JPG "관리자모드")
+![회원관리](./readimg/admin/adminsub2 "글관리")
+![회원관리](./readimg/admin/adminsub2detail "글자세히")
+
 
 ## 프로젝트 설계
 ![개념적 설계](./img/database/pro01_01.png "개념적 설계")

@@ -77,7 +77,7 @@
 						</tr>
 						<tr>
 							<th><label for="email">이메일</label></th>
-							<td><input type="text" name="email" id="email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]"></td>
+							<td><input type="text" name="email" id="email" pattern="[a-zA-Z0-9]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,100}"></td>
 						</tr>						
 						<tr>
 							<td colspan="2">

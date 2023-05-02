@@ -110,8 +110,8 @@ table>input {width:100%}
                 <form action="adminupdatePro.jsp?mid=<%=mid%>" method="post" >
                 <table style="margin:0 auto" >
 	               	<tr>
-	                <th><label for="mid">아이디</label></th>
-	                <td><input type="text" class="uin" name="mpw" value="<%=mid%>"></td>
+	                <th>아이디</th>
+	                <td><%=mid%></td>
 	                </tr>
 	                <tr>
 	                <th><label for="mpw">비밀번호</label></th>
