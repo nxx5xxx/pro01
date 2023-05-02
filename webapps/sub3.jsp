@@ -35,6 +35,8 @@
   .page_tit {padding-top:50px}
   .sub3_b1 {height : 660px ; margin-top:50px}
   .page_wrap {text-align:center}
+  a:link {color : black;}
+  a:visited {color : black;}
     </style>
 </head>
 <body>
@@ -51,15 +53,15 @@
             </figure>
             <section class="page" id="page1">
                 <h2 class="page_tit">진행중인 초특가</h2>
-                <div class="page_wrap"><h3>[진행] 2023년 한정특가14탄, 다수의 수상내역으로 증명된 퀄리티 'Devaux Cuvee D'</h3>
-                	<img src="<%=path1%>/img/sub3_b1.PNG" class="sub3_b1">
+                <div class="page_wrap"><h3><a href="sub3_1.jsp">[진행] 2023년 한정특가14탄, 다수의 수상내역으로 증명된 퀄리티 'Devaux Cuvee D'</a></h3>
+                	<a href="sub3_1.jsp"><img src="<%=path1%>/img/sub3_b1.PNG" class="sub3_b1"></a>
                 </div>
                 
             </section>
             <section class="page" id="page2">
                 <h2 class="page_tit">지난 와인 다시보기</h2>
-                <div class="page_wrap"><h3><br>[마감] 2023년 한정특가10탄, VIVINO 4.0, Decanter 89, 샹파뉴 최남단, 샤블리를 닮은 ‘꼬뜨 데 바’…</h3>
-                <img src="<%=path1%>/img/sub3_b2.PNG" class="sub3_b1">
+                <div class="page_wrap"><h3><a href="sub3_1.jsp"><br>[마감] 2023년 한정특가10탄, VIVINO 4.0, Decanter 89, 샹파뉴 최남단, 샤블리를 닮은 ‘꼬뜨 데 바’…</a></h3>
+                <a href="sub3_2.jsp"><img src="<%=path1%>/img/sub3_b2.PNG" class="sub3_b1"></a>
                 </div>
             </section>
 

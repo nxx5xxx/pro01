@@ -54,13 +54,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">  
     <link rel="stylesheet" href="<%=path1%>/common.css">
     <link rel="stylesheet" href="<%=path1%>/main.css" > 
+    
+     <script src="<%=path1%>/jquery-1.10.1.min.js"></script>
+    <script src="<%=path1%>/datatables.min.js"></script>
+    <link rel="stylesheet" href="<%=path1%>/datatables.min.css">
 <style>
-table {border-collapse : collapse; border:2px solid black}
+table {border-collapse : collapse; border:2px solid black ;width : 1200px}
 th {background-color:black ; color : white ;}
 td {border:1px solid black; }
-.id {width :150px}
-.pw{width : 150px}
-.addr {width:250px}
+td,th {padding:10px}
+.tb_1 {width:1300px;margin :0 auto;padding-top:50px}
 
 </style>
 
@@ -69,15 +72,19 @@ td {border:1px solid black; }
 		<!--헤더영역  -->
     	<%@ include file="adminheader.jsp" %>
 		<!--헤더영역  -->
-<a href="<%=path1%>/index.jsp">홈으로</a>
-<table>
+<div class="tb_1">
+<table class="table" id="admintb">
+	<thead>
 			<tr>
 			<th class="id">아이디</th><th class="pw">비밀번호</th><th class="name">이름</th><th class="tel">전화번호</th>
-			<th class="addr">주소</th><th class="email">이메일</th><th class="regdate">등록일</th> 
+			<th class="addr">주소</th><th class="email">이메일</th><th class="regdate">등록일</th><th>수정</th><th>삭제</th> 
 			</tr>
+	</thead>
+	<tbody>
 <%
 					while(rs.next()){
 %>
+	
 			<tr>
 					<td class="id"><%=rs.getString("id")%></td>
 					<td class="pw"><%=rs.getString("pw")%></td>
@@ -85,13 +92,22 @@ td {border:1px solid black; }
 					<td class="tel"><%=rs.getString("tel")%></td>
 					<td class="addr"><%=rs.getString("addr")%></td>
 					<td class="email"><%=rs.getString("email")%></td>
-					<td class="regdate"><%=rs.getString("regdate")%></td>						
+					<td class="regdate"><%=rs.getString("regdate")%></td>	
+					<td><a href="adminupdate.jsp?id=<%=rs.getString("id")%>" >회원정보 수정</a></td>
+					<td><a href="UserdeletePro.jsp?id=<%=rs.getString("id")%>" >회원정보 삭제</a></td>
 			</tr>
+	
 <%
 					}		
 %>
-
+	</tbody>
 </table>
+</div>
+                <script>
+				$(document).ready(function(){
+				    $('#admintb').DataTable({'order': [[0, 'desc']]});
+				});
+				</script>
 </body>
 </html>
 

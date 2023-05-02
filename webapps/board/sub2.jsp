@@ -71,6 +71,7 @@ hr {width:1500px ; margin: 0 auto; }
 .table.dataTable thead>tr>th { text-align:center; }
 .dataTables_length { margin-bottom: 10px; }
 .page_wrap {margin-top:50px}
+a:visited , a:link{color : #302f2f}
     </style>
 </head>
 <body>

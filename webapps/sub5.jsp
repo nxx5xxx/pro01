@@ -35,6 +35,8 @@
   .page_tit {padding-top:50px}
   .sub5_b1 {height : 660px ; margin-top:50px}
   .page_wrap {text-align:center}
+  a:link {color : black;}
+  a:visited {color : black;}
     </style>
 </head>
 <body>
@@ -50,14 +52,14 @@
             </figure>
             <section class="page" id="page1">
                 <h2 class="page_tit">이달의 와인</h2>
-                <div class="page_wrap"><h3>2023년 04월 이달의 와인_이탈리아 중부, 라치오 지역의 명 생산자!! '포지오 레 볼피'</h3>
-                	<img src="<%=path1%>/img/sub5_b1.PNG" class="sub5_b1">
+                <div class="page_wrap"><h3><a href="sub5_1.jsp">2023년 04월 이달의 와인_이탈리아 중부, 라치오 지역의 명 생산자!! '포지오 레 볼피'</a></h3>
+                	<a href="sub5_1.jsp"><img src="<%=path1%>/img/sub5_b1.PNG" class="sub5_b1"></a>
                 </div>
             </section>
             <section class="page" id="page2">
                 <h2 class="page_tit">지난 와인 다시보기</h2>
-                <div class="page_wrap"><h3>2023년 02월 이달의 와인_연필 모양의 독특한 패키지, 피에몬테의 예술적인 와이너리 '피코 마카리오' 6종</h3>
-                	<img src="<%=path1%>/img/sub5_b2.PNG" class="sub5_b1">
+                <div class="page_wrap"><h3><a href="sub5_2.jsp">2023년 02월 이달의 와인_연필 모양의 독특한 패키지, 피에몬테의 예술적인 와이너리 '피코 마카리오' 6종</a></h3>
+                	<a href="sub5_2.jsp"><img src="<%=path1%>/img/sub5_b2.PNG" class="sub5_b1"></a>
                 </div>
             </section>
         </div>

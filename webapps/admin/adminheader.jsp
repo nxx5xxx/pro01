@@ -28,7 +28,7 @@
                                 <a href="<%=path_hd%>/admin/adminUsers.jsp">회원관리</a>
                             </li>
                             <li>
-                                <a href="<%=path_hd%>/sub3.jsp">게시판 관리</a>
+                                <a href="<%=path_hd%>/admin/adminsub2.jsp">게시판 관리</a>
                             </li>
                         </ul>
                     </nav>

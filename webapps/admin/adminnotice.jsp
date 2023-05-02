@@ -6,6 +6,9 @@
 	if(session.getAttribute("id")!=null) {
 		sub2id = (String) session.getAttribute("id");
 	}
+	if(!sub2id.equals("admin")){
+		response.sendRedirect("../index.jsp");
+	}
 	String path1 = request.getContextPath();
 	String driver = "org.postgresql.Driver";
 	String url = "jdbc:postgresql://localhost/pro1";
@@ -89,7 +92,7 @@ th,td{ border: 1px solid black }
 								<%
 								if(sub2id!=""){
 								%>
-								<td><a href="subDetail.jsp?bno=<%=rs.getString("bno") %>"><%=rs.getString("title") %></a></td>
+								<td><a href="adminsubDetail.jsp?bno=<%=rs.getString("bno") %>"><%=rs.getString("title") %></a></td>
 								<%
 								}else{
 								%>

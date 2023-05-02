@@ -35,6 +35,8 @@
   .page_tit {padding-top:50px}
   .sub4_b1 {height : 660px ; margin-top:50px}
   .page_wrap {text-align:center}
+   a:link {color : black;}
+  a:visited {color : black;}
     </style>
 </head>
 <body>
@@ -50,14 +52,14 @@
             </figure>
             <section class="page" id="page1">
                 <h2 class="page_tit">진행중인 특가</h2>
-                <div class="page_wrap"><h3>[진행] 04월 이달의 특가가 업데이트 되었습니다.</h3>
-                	<img src="<%=path1%>/img/sub4_b1.PNG" class="sub4_b1">
+                <div class="page_wrap"><h3><a href="sub4_1.jsp">[진행] 04월 이달의 특가가 업데이트 되었습니다.</a></h3>
+                	<a href="sub4_1.jsp"><img src="<%=path1%>/img/sub4_b1.PNG" class="sub4_b1"></a>
                 </div>
             </section>
             <section class="page" id="page2">
                 <h2 class="page_tit">지난 와인 다시보기</h2>
-                <div class="page_wrap"><h3>[마감] 03월 이달의 특가가 업데이트 되었습니다.</h3>
-                	<img src="<%=path1%>/img/sub4_b2.PNG" class="sub4_b1">
+                <div class="page_wrap"><h3><a href="sub4_2.jsp">[마감] 03월 이달의 특가가 업데이트 되었습니다.</a></h3>
+                	<a href="sub4_2.jsp"><img src="<%=path1%>/img/sub4_b2.PNG" class="sub4_b1"></a>
                 </div>
             </section>
 

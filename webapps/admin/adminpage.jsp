@@ -40,6 +40,7 @@
     <link rel="stylesheet" href="<%=path1%>/common.css">
     <link rel="stylesheet" href="<%=path1%>/main.css" > 
 <style>
+h1 {text-align:center}
 </style>
 
 </head>
@@ -47,11 +48,6 @@
 		<!--헤더영역  -->
     	<%@ include file="adminheader.jsp" %>
 		<!--헤더영역  -->
-	<table>
-		<tr>
-			<th><a href="adminUsers.jsp">전체 회원 목록</a></th>
-			<th><a href="">전체 게시글 목록</a></th>
-		</tr>
-	</table>
+<h1>관리자 페이지 입니다</h1>
 </body>
 </html>

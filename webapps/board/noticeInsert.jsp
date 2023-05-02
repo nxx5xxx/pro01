@@ -36,7 +36,7 @@
 
     <style>
 table {margin : 0 auto ;border: 2px solid black ; border-collapse : collapse; width: 1100px}
-th {background-color:black ; color:white}
+th {background-color:rgba(150, 150, 150) ; color:white}
 th,td{ border: 1px solid black }
 input {width:100%}
 .content_box {height: 300px ; width:100% ;overflow-wrap: break-word;resize:none}
@@ -68,11 +68,11 @@ a:link,a:visited {color : white;}
 								<th>등록자 명</th><td colspan="3"><%=nid%></td>
 							</tr>
 							<tr class="content_sub1">
-								<th colspan="4"><textarea rows="12" cols="10" class="content_box" name="content" ></textarea></th>
+								<th colspan="4"><textarea rows="12" cols="10" class="content_box" name="content"  placeholder="내용을 입력하세요"></textarea></th>
 							</tr>
 
 							<tr>
-							<th colspan="2"><a href="sub2.jsp">목록으로</a></th><th colspan="2"><input type="submit" value="글쓰기"></th>
+							<th colspan="2"><a href="sub2.jsp">목록으로</a></th><th colspan="2"><input type="submit" value="글쓰기" ></th>
 							</tr>
 						</table>
 				</form>
