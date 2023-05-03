@@ -69,7 +69,7 @@ java(1.8 ver), css , html 등을 활용하였고
 
 
 회원의 글쓰기는 어디까지나 테스트적인 면에서 로그인 한 회원도 글을쓸수 있고 자신의 글(다른사람은 불가)을 수정 할수 있는 기능해 놓았다
-글쓰기 -> 공지사항(board/sub2.jsp) -> 글쓰기(board/noticeInsert.jsp) -> 글쓰기확인(board/noticeInsertPro.jsp) -> 공지사항board/sub2.jsp)
+글쓰기 -> 공지사항(board/sub2.jsp) -> 글쓰기(board/noticeInsert.jsp) -> 글쓰기확인(board/noticeInsertPro.jsp) -> 공지사항(board/sub2.jsp)
 ![공지사항](./readimg/user/board.JPG "공지사항")
 ![공지사항](./readimg/user/boardinsert.jpg "글쓰기")
 ![공지사항](./readimg/user/boardinsert2.jpg "글쓰기확인")
@@ -103,6 +103,7 @@ java(1.8 ver), css , html 등을 활용하였고
 ![회원관리](./readimg/admin/adminUserUpdate.JPG "회원정보수정")
 
 회원삭제 -> 관리자모드(admin/adminpage.jsp) -> 회원관리(admin/adminUsers.jsp) -> 회원정보삭제(admin/admindeletePro.jsp) -> 회원관리페이지(admin/adminUsers.jsp)
+
 ![회원관리](./readimg/admin/top_button.JPG "관리자모드")
 ![회원관리](./readimg/admin/adminuser.JPG "회원 관리")
 ![회원관리](./readimg/admin/adminuserdel.JPG "회원삭제")
